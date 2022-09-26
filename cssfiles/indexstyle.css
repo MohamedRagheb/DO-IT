@@ -1,0 +1,46 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+}.nav{   
+ position: relative;
+width:100%;
+height: 60px;
+left: 0px;
+top: 0px;
+background: #1070A6;
+
+}
+.nav .img{
+    position: absolute;
+    left: 0px;
+    top: -68px;
+    float: left;
+
+}
+.nav .welcome-text{
+    float: right;
+    margin-right: 6vw;
+    margin-top: 2.5vh;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 42px;
+text-align: center;
+position: relative;
+top:-12px;
+color: #F16918;
+
+}
+.side-dash{
+    width: 50px;
+    height: 100vh;
+    background-color: rgba(217, 217, 217, 0.3);
+    float: right;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+
+}
