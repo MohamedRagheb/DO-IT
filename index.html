@@ -7,19 +7,46 @@
     <title>DO IT</title>
     <link rel="icon" href="media/logo-withbg-removebg.png">
     <link rel="stylesheet" href="cssfiles/indexstyle.css">
+    <link rel="stylesheet" href="cssfiles/all.css">
+    <link rel="stylesheet" href="cssfiles/all.min.css">
+    <link rel="stylesheet" href="cssfiles/bootstrap.min.css">
+    <link rel="stylesheet" href="cssfiles/bootstrap.min.css.map">
   
 </head>
 <body>
     <div class="nav">
-        <img src="/media/logo-withbg-removebg.png" alt="logo" class="img">
+        <img src="media/logo-withbg-removebg.png" alt="logo" class="img">
         <div class="welcome-text">
             <h3>Hii,Mohamed</h3>
         </div>
         </div>
         <div class="side-dash">
-
+            <i class="fa-regular fa-note-sticky fa-xl" onclick="notefilter()"></i> <br><br><br>
+            <i class="fa-solid fa-clipboard-list fa-xl" onclick="reminderfilter()"></i>
         </div>
-    </div>
-    
+        
+        <div class="cricle" onclick="plus()" ondblclick="nonplus()" id="cricle">
+            <div class="parent"><span class="i">
+                <i class="fa-solid fa-plus fa-2xl"></i></span>
+            </div><div class="parent-box" id="box">
+            <div class="box" onclick="newnote()" id="newnotebox">
+                <font><b>New Note</b></font>
+            </div>
+            <div class="box" onclick="newreminder()" id="newreminderbox">
+                <font><b>New reminder</b></font>
+            </div>
+        </div></div>
+        <div class="notesection">
+            <h2><font color="black" size="15px">Note</font></h2> 
+            <div class="notecontiner">
+                <div class="note"></div>
+                <div class="note"></div>
+                <div class="note"></div>
+            </div>
+        </div>
+    <script src="jsfiles/all.min.js"></script>
+    <script src="jsfiles/bootstrap.bundle.min.js"></script>
+    <script src="jsfiles/bootstrap.bundle.min.js.map"></script>
+    <script src="jsfiles/indexmachine.js"></script>
 </body>
 </html>

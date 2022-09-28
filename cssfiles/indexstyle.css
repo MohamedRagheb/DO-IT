@@ -9,6 +9,8 @@ height: 60px;
 left: 0px;
 top: 0px;
 background: #1070A6;
+padding-left: 15px;
+overflow: hidden;
 
 }
 .nav .img{
@@ -19,8 +21,7 @@ background: #1070A6;
 
 }
 .nav .welcome-text{
-    float: right;
-    margin-right: 6vw;
+    margin-right: 9vw;
     margin-top: 2.5vh;
     font-family: 'Inter';
 font-style: normal;
@@ -29,9 +30,13 @@ font-size: 20px;
 line-height: 42px;
 text-align: center;
 position: relative;
-top:-12px;
+left: 85vw;
+top:-9px;
 color: #F16918;
 
+}
+.nav .welcome-text::selection{
+    color:blue;
 }
 .side-dash{
     width: 50px;
@@ -42,5 +47,85 @@ color: #F16918;
     right: 0px;
     top: 0px;
     z-index: -1;
+    padding-top: 13vh;
+    padding-left: 15px;
 
+}
+.parent-box{
+    height:250px;
+    width: 230px;
+    display: flex;
+    position: absolute;
+    bottom: 19px;
+    right: 40px;
+    padding-top: 20px;
+    padding-left: 23px;
+  
+    
+}
+#box{
+    display: none;
+}
+.parent-box .box{
+    width: 180px;
+    height: 40px;
+    display: flex;
+   justify-content: center;
+   text-align: center;
+    position: relative;
+    right: 55px;
+    background-color: transparent;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    z-index: 3 ;
+    padding-top:6px ;
+ 
+}
+.cricle .parent{
+   height: 61px;
+   width: 61px ;
+   background-color: #F16918;
+    border-radius: 270px;
+    position: absolute;
+    bottom: 17px;
+    right: 75px;
+    display:flex ;
+    justify-content: center;
+    text-align: center;
+}
+
+.cricle .parent .i{
+    position: relative;
+    top: 15px;
+}
+.notesection{
+    padding:34px;
+}
+.notecontiner{
+    display: flex;
+    overflow-x: scroll;
+    gap: 75px;
+    padding-top: 27px;
+    padding-left: 30px;
+    height: 37vh;
+    width: 81vw;
+    scroll-snap-type: x mandatory;
+    margin-top: 27px;
+    scroll-padding: 20px;
+    background-color: black;
+    border-radius: 30px;
+}
+.notecontiner::-webkit-scrollbar{
+    display: none;
+}
+
+.notecontiner .note{
+    flex: 0 0 100%;
+    max-width: 300px;
+    height: 87%;
+    width:300px;
+    background-color: blue;
+    border-radius:30px;
+    scroll-snap-align: start;
 }
