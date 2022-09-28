@@ -40,7 +40,7 @@ color: #F16918;
 }
 .side-dash{
     width: 50px;
-    height: 100vh;
+    height: 150vh;
     background-color: rgba(217, 217, 217, 0.3);
     float: right;
     position: absolute;
@@ -55,7 +55,7 @@ color: #F16918;
     height:250px;
     width: 230px;
     display: flex;
-    position: absolute;
+    position: fixed;
     bottom: 19px;
     right: 40px;
     padding-top: 20px;
@@ -82,12 +82,13 @@ color: #F16918;
     padding-top:6px ;
  
 }
+
 .cricle .parent{
    height: 61px;
    width: 61px ;
    background-color: #F16918;
     border-radius: 270px;
-    position: absolute;
+    position: fixed;
     bottom: 17px;
     right: 75px;
     display:flex ;
@@ -113,7 +114,7 @@ color: #F16918;
     scroll-snap-type: x mandatory;
     margin-top: 27px;
     scroll-padding: 20px;
-    background-color: black;
+    background-color:rgba(128, 128, 128, 0.071);
     border-radius: 30px;
 }
 .notecontiner::-webkit-scrollbar{
@@ -125,7 +126,46 @@ color: #F16918;
     max-width: 300px;
     height: 87%;
     width:300px;
-    background-color: blue;
     border-radius:30px;
     scroll-snap-align: start;
+    border: 5px solid black;
+}
+.notecontiner .note .topsection{
+    height: 80px;
+    width: 100%;
+    background-color:#80808039 ;
+    border-bottom:5px solid black ;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 25px;
+    padding:10px;
+    padding-top:15px;
+}
+.notecontiner .note .topsection h4 {
+    font-size:20px;
+
+}
+.notecontiner .note .dwonsection h5{
+    padding-top: 12px;
+    padding-left:10px;
+    height:140px;
+    width: 100%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
+}
+.remndersection{
+    margin-top: 25px;
+    margin-left: 2vw;
+
+}
+.remndersection .remindercontiner{
+    height: 400px;
+    width: 40%;
+    margin-left:2vw;
+    border-radius: 24px;
+}
+.reminder{
+    font-size: 30px;
+    width: 60%;
+    padding-left: 12px;
 }
