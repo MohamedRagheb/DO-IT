@@ -21,8 +21,10 @@
         </div>
         </div>
         <div class="side-dash">
-            <i class="fa-regular fa-note-sticky fa-xl" onclick="notefilter()"></i> <br><br><br>
-            <i class="fa-solid fa-clipboard-list fa-xl" onclick="reminderfilter()"></i>
+            <div class="i" onclick="notefilter()"><i class="fa-regular fa-note-sticky fa-xl"></i></div>
+             <br><br><br>
+             <div class="i" onclick="reminderfilter()"><i class="fa-solid fa-clipboard-list fa-xl" ></i></div>
+            
         </div>
         
         <div class="cricle" onclick="plus()" ondblclick="nonplus()" id="cricle">
@@ -38,8 +40,8 @@
         </div></div>
         <div class="notesection">
             <h2><font color="black" size="15px">Note</font></h2> 
-            <div class="notecontiner">
-                <div class="note">
+            <div class="notecontiner" id="notes">
+                <div class="note" >
                     <div class="topsection">
                        <h4><b>Mohamed</b></h4>
                        <h6><b>Note Title</b></h6>
@@ -50,15 +52,33 @@
                 </div>
             </div>
         </div>
-        <div class="remndersection">
+        <div class="remndersection"id="reminds" >
             <h2><font color="black" size="15px">Reminds</font></h2> 
-            <div class="remindercontiner">
+            <div class="remindercontiner" >
                 <ul>
                     <li class="reminder">
                         <font color="black">Frist reminder</font>
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="overlay" id="overlay">
+        </div>
+        <div class="noteform" id="noteform">
+            <h3>New Note</h3>
+            <div class="i"><i class="fa-solid fa-xmark fa-2xl" onclick="cancel()"></i></div>
+            <br>
+            <h5>From</h5>
+            <input type="text" placeholder="Your Name" id="nametext" class="nametext">
+            <br>
+            <br>
+            <h5>Title</h5>
+            <input type="text" placeholder="Note Title" id="titlletext" class="titletext">
+            <br><br>
+            <h5>Note</h5>
+            <textarea name="Note" id="note" cols="30" rows="10"></textarea><br>
+            <input type="button" value="ADD" id="addnewnotebtn" onclick="addnewnote()">
+            
         </div>
     <script src="jsfiles/all.min.js"></script>
     <script src="jsfiles/bootstrap.bundle.min.js"></script>
