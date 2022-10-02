@@ -239,11 +239,57 @@ color: #F16918;
 #addnewnotebtn{
     width: 120px;
     height: 38px;
-background-color: #1070A6;
-border-radius: 10px;
-outline: none;
-border: solid 2px transparent;
-margin-top: 5px;
-position: relative;
-left: 36%;
+    background-color: #1070A6;
+    border-radius: 10px;
+    outline: none;
+    border: solid 2px transparent;
+    margin-top: 5px;
+    position: relative;
+    left: 36%;
+}
+.reminderform{
+    width: 500px;
+    height: 480px;
+    background-color:white;
+    padding: 25px;
+    position: fixed;
+    top: 150px;
+    left: 30%;
+    display:block;
+      z-index: 4;
+    display: none;
+}
+.reminderform .i {
+    float: right;
+    position:absolute;
+    top:25px;
+    right: 25px;
+}
+.reminderform h3{
+    font-size: 35px;
+}
+.reminderform #remindertext{
+    width: 92%;
+    height: 190px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+}
+#addnewreminderbtn{
+    width: 120px;
+    height: 38px;
+    background-color: #1070A6;
+    border-radius: 10px;
+    outline: none;
+    border: solid 2px transparent;
+    margin-top: 5px;
+    position: relative;
+    left: 36%;
+}
+.reminderform #remindercolor{
+    width: 92%;
+    outline: none;
+    height: 30px;
+    border-radius: 8px;
+    border: 2px solid gray;
 }
