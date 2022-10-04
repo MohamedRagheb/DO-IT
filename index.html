@@ -14,9 +14,23 @@
   
 </head>
 <body>
+                    <!-- nav -->
     <div class="nav">
         <img src="media/logo-withbg-removebg.png" alt="logo" class="img">
         </div>
+                    <!-- close/nav -->
+            <select id="filter" >
+                <option value="non" selected disabled >Filter</option>
+                <option value="note">
+                    <font color="black"> Notes</font>
+                </option>
+                <option value="Reminders"> 
+                    <font color="black"> Reminders</font>
+                </option>
+                <option value="all">
+                    <font color="black"> All</font>
+                </option>
+            </select>
         <div class="cricle" onclick="plus()" ondblclick="nonplus()" id="cricle">
             <div class="parent"><span class="i">
                 <i class="fa-solid fa-plus fa-2xl"></i></span>

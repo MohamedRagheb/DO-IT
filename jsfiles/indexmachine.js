@@ -11,6 +11,7 @@ let reminderform = document.getElementById('reminderform')
 let remindertext = document.getElementById('remindertext')
 let remindercolor = document.getElementById('remindercolor')
 let reminders = document.getElementById('reminders')
+let filter = document.getElementById('filter')
 
 newbox.style.display = "none"
 
@@ -59,3 +60,17 @@ function addnereminder(){
     newbox.style.display = "none"
     reminders.innerHTML += '<li class="reminder" style="color:'+remindercolor.value+';"> <font color="black">'+remindertext.value+'</font></li>'
 }
+filter.oninput = function pagefilter(){switch(filter.value){
+    case "note" :
+    reminds.style.display = "none";
+    noteconti.style.display = 'block';
+    break;
+    case "Reminders":
+    noteconti.style.display = "none";
+    reminds.style.display = "block"
+    break;
+    case "all":
+     noteconti.style.display = "block";
+    reminds.style.display = "block"
+    break
+}}

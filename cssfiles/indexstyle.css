@@ -114,9 +114,11 @@ overflow: hidden;
     border-top-right-radius: 25px;
     padding:10px;
     padding-top:15px;
+  
 }
 .notecontiner .note .topsection h4 {
     font-size:20px;
+
 
 }
 .notecontiner .note .dwonsection h5{
@@ -264,6 +266,17 @@ overflow: hidden;
     height: 30px;
     border-radius: 8px;
     border: 2px solid gray;
+}
+#filter{
+    position:relative;
+    float: right;
+    right:15px;
+    top: 10px;
+    height: 35px;
+    border-radius: 8px;
+    background-color: rgba(128, 128, 128, 0.256);
+    outline: transparent;
+    border: 2px transparent solid;
 }
             /* mobilephone */
 @media only screen and (max-width: 600px){
