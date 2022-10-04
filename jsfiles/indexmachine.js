@@ -16,6 +16,7 @@ newbox.style.display = "none"
 
 function plus() {
     newbox.style.display = "inline-block"
+    overlay.style.display = "block"
 }
 function nonplus() {
     newbox.style.display = "none"

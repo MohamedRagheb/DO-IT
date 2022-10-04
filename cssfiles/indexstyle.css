@@ -20,37 +20,7 @@ overflow: hidden;
     float: left;
 
 }
-.nav .welcome-text{
-    margin-right: 9vw;
-    margin-top: 2.5vh;
-    font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 42px;
-text-align: center;
-position: relative;
-left: 85vw;
-top:-9px;
-color: #F16918;
 
-}
-.nav .welcome-text::selection{
-    color:blue;
-}
-.side-dash{
-    width: 50px;
-    height: 150vh;
-    background-color: rgba(217, 217, 217, 0.3);
-    float: right;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    z-index: -1;
-    padding-top: 13vh;
-    padding-left: 15px;
-
-}
 
 .parent-box{
     height:250px;
@@ -94,7 +64,7 @@ color: #F16918;
     border-radius: 270px;
     position: fixed;
     bottom: 17px;
-    right: 75px;
+    right: 35px;
     display:flex ;
     justify-content: center;
     text-align: center;
@@ -161,6 +131,7 @@ color: #F16918;
 .remndersection{
     margin-top: 25px;
     margin-left: 2vw;
+    width: 90vw;
 
 }
 .remndersection .remindercontiner{
@@ -168,6 +139,7 @@ color: #F16918;
     width: 40%;
     margin-left:2vw;
     border-radius: 24px;
+    width: 100%;
 }
 .reminder{
     font-size: 30px;
@@ -292,4 +264,28 @@ color: #F16918;
     height: 30px;
     border-radius: 8px;
     border: 2px solid gray;
+}
+            /* mobilephone */
+@media only screen and (max-width: 600px){
+    .noteform{
+        left: 4%;
+        width: 89vw;
+    }
+    .noteform #nametext ,.noteform #titlletext ,.noteform #note{
+        width: 95%;
+    }
+    .reminderform{
+        left: 4%;
+        width: 89vw;
+    }
+}
+            /* ipad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+{
+    .noteform {
+       position: fixed;
+       top: 25vh;
+       left: 25%;
+    }
+
 }
