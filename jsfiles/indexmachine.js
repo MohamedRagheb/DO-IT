@@ -46,7 +46,7 @@ function cancel(){
     reminderform.style.display = "none"
 }
 function addnewnote() {
-   notes.innerHTML += '<div class="note" > <div class="topsection"><h4><b>'+notename.value+'</b></h4><h6><b>'+notetitle.value+'</b></h6></div> <div class="dwonsection"> <h5><font color="black" >'+note.value+'</font></h5></div></div>'
+   notes.innerHTML += '<div class="note" > <div class="topsection"><h4><b>'+notename.value+'</b></h4><h6><b>'+notetitle.value+'</b></h6></div> <div class="dwonsection"> <p><font color="black" >'+note.value+'</font></p></div></div>'
    overlay.style.display = "none"
     noteform.style.display = "none"
     newbox.style.display = "none"

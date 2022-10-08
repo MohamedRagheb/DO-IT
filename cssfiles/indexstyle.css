@@ -121,14 +121,14 @@ overflow: hidden;
 
 
 }
-.notecontiner .note .dwonsection h5{
+.notecontiner .note .dwonsection p{
     padding-top: 12px;
     padding-left:10px;
     height:140px;
     width: 100%;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    
+    font-size: bolder;
 }
 .remndersection{
     margin-top: 25px;
@@ -301,4 +301,13 @@ overflow: hidden;
        left: 25%;
     }
 
+}
+.noteform textarea{
+    resize: none;
+    padding-right:125px;
+    padding: 15px;
+}
+.reminderform textarea{
+    resize: none;
+    padding-right: 50px;
 }
