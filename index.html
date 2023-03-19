@@ -44,25 +44,33 @@
         </div></div>
         <div class="notesection" id="notediv">
             <h2><font color="black" size="15px">Notes</font></h2> 
+          
             <div class="notecontiner" id="notes">
-                <div class="note" >
+                <!-- <div class="note" >
                     <div class="topsection">
                        <h4><b>Mohamed</b></h4>
                        <h6><b>Note Title</b></h6>
+                        <div class="control">
+                                <ul>
+                                    <li><span class="delfun">Delete</li>
+                                </ul>
+                        </div>
                     </div>
                     <div class="dwonsection">
-                        <p><font color="black" >hi note test</font></p>
+                        <div class="notecontent">hi note test  </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="remndersection"id="reminds" >
             <h2><font color="black" size="15px">Reminds</font></h2> 
             <div class="remindercontiner" >
                 <ul id="reminders">
-                    <li class="reminder">
-                        <font color="black">Frist reminder</font>
-                    </li>
+                    <!-- <li class="reminder">
+                        <p color="black">Frist reminder
+                        </p>
+                        <span class="del">Delete</span>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -70,25 +78,26 @@
         </div>
         <div class="noteform" id="noteform">
             <h3>New Note</h3>
+            <div class="erorrNote" id="motaz"></div>
             <div class="i"><i class="fa-solid fa-xmark fa-2xl" onclick="cancel()"></i></div>
             <br>
             <h5>From</h5>
-            <input type="text" placeholder="Your Name" id="nametext" class="nametext">
+            <input type="text" placeholder="Your Name" id="nametext" class="nametext" vaild-name="Name">
             <br>
             <br>
             <h5>Title</h5>
-            <input type="text" placeholder="Note Title" id="titlletext" class="titletext" maxlength="15">
+            <input type="text" placeholder="Note Title" id="titlletext" class="titletext" vaild-name="Title">
             <br><br>
             <h5>Note</h5>
             <textarea name="Note" id="note" cols="5" rows="5"></textarea><br>
-            <input type="button" value="ADD" id="addnewnotebtn" onclick="addnewnote()">
+            <button  id="addnewnotebtn" onclick="addnewnote()">ADD</button>
         </div>
         <div class="reminderform" id="reminderform">
             <h3>New Reminder</h3>
             <div class="i"><i class="fa-solid fa-xmark fa-2xl" onclick="cancel()"></i></div>
             <br>
             <h5>What do you want to be reminded?</h5>
-            <textarea name="reminder" id="remindertext" cols="8" rows="6"></textarea>
+            <textarea name="reminder" id="reminderscontant" cols="8" rows="6" placeholder="Reminder Contant" class="farah"></textarea>
             <br>
             <select name="remindercolor" id="remindercolor">
                 <option value="non" selected disabled>Remind importance</option>
