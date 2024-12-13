@@ -12,12 +12,13 @@ let textarea = document.querySelector('.farah')
 let remindercolor = document.getElementById('remindercolor')
 let reminders = document.getElementById('reminders')
 let filter = document.getElementById('filter')
-let deleteIcons = document.getElementsByClassName("delfun");
 let notedivclass = document.getElementsByClassName('note');
 let noteFormInputs = document.querySelectorAll(".noteform input")
 
+
+
 newbox.style.display = "none"
-// beta bootstrap modal 
+// beta bootstrap modal
 function plus() {
     newbox.style.display = "inline-block"
     overlay.style.display = "block"
@@ -38,10 +39,9 @@ function newreminder(){
     overlay.style.display = "block"
     reminderform.style.display = "block"
 }
-function notefilter() {
-    reminds.style.display = "none"
 
-}
+
+
 function cancel(){
     overlay.style.display = "none"
     noteform.style.display = "none"
@@ -55,22 +55,20 @@ function addDataToLocalStorageFrom(arrayOfTasks,where) {
     getDataFromLocalStorageRemides(reminderStore)
 
   }
-//add note 
+//add note
 let noteStore = []
 window.onload = getDataFromLocalStorageNote()
 function getDataFromLocalStorageNote() {
     let data = window.localStorage.getItem("notes");
-    // console.log(data)
     if (data) {
        noteStore = JSON.parse(data);
-    //    console.log(noteStore)
       windowRefreshNote(noteStore);
       console.log(noteStore)
     }
 }
 
 function addnewnote() {
-    if(notename.value != ""&&notetitle.value != "" &&notetitle.value.length <15&&notename.value.length <15){
+    if(notename.value != ""&&notetitle.value != "" && notetitle.value.length <15 && notename.value.length <15){
     overlay.style.display = "none";
     noteform.style.display = "none";
     newbox.style.display = "none";
@@ -81,7 +79,7 @@ function addnewnote() {
     notetitle.value = "";
     noteFetch.value = "";
 }else{
-   let erorBox = document.getElementById("motaz");
+   let erorBox = document.getElementById("errorHelperText");
    for(let input of noteFormInputs){
        if(input.value == ""){
            input.style.border = "3px solid red"
@@ -90,27 +88,26 @@ function addnewnote() {
         if(input.value.length > 15){
             input.style.border = "3px solid red";
             inputAttribute = input.getAttribute("vaild-name")
-            // console.log(inputAttribute)
             erorBox.innerHTML =  `Too Long ${inputAttribute}`;
         }
    }
 }
 }
 
-function windowRefreshNote(arre){ 
+function windowRefreshNote(arre){
     notesDiv.innerHTML = " ";
     if(arre.length == 0){
-        notesDiv.innerHTML = 
+        notesDiv.innerHTML =
                             `<center><font style="position: relative; top: 25%;  text-align: center;"> There Is No Notes </font></center>`
     }
     for(i=0; i<arre.length; i++){
         let noteDiv = document.createElement("div")
-        noteDiv.className = "note" 
+        noteDiv.className = "note"
         noteDiv.setAttribute("data-set",arre[i].id)
         // top section creation
         let noteTopSection = document.createElement("div")
         noteTopSection.classList.add("topsection");
-            // Top Section Childs  creation And Add data  
+            // Top Section Childs  creation And Add data
                 // Sender Section Creation
                 let topH4Create = document.createElement("h4");
                 let boldTextversionSender = document.createElement("b")
@@ -127,7 +124,7 @@ function windowRefreshNote(arre){
                     noteTopSection.append(topH6create);
                 // control div creation
                 let controlDivCreation = document.createElement("div")
-                controlDivCreation.classList.add("control") 
+                controlDivCreation.classList.add("control")
                             controlDivCreation.innerHTML = `
                             <div class="delfun">Delete<div>
                             `
@@ -145,7 +142,6 @@ function windowRefreshNote(arre){
                     downSection.prepend(noteContentSection);
         noteDiv.append(downSection);
         notesDiv.append(noteDiv)
-        // addDataToLocalStorageFrom(arre[i])
     }
     // noteClickfunctions
     for(const note of notedivclass ){
@@ -156,7 +152,7 @@ function windowRefreshNote(arre){
         })
     }
 }
-//add reminder 
+//add reminder
 let reminderStore = [];
 function addnereminder(){
     overlay.style.display = "none";
@@ -169,7 +165,6 @@ function addnereminder(){
 }
 function getDataFromLocalStorageRemides() {
     let data = window.localStorage.getItem("reminds");
-    // console.log(data)
     if (data) {
        reminderStore = JSON.parse(data);
       windowRefreshReminds(reminderStore);
@@ -196,17 +191,17 @@ function windowRefreshReminds(arree){
             return a.done - b.done;
         }
     )
-   for(i=0;i<arreed.length;i++){ 
-        // li creation 
+   for(i=0;i<arreed.length;i++){
+        // li creation
                 let li = document.createElement("li");
                 li.classList.add("reminder");
                 li.setAttribute("data-id",arreed[i].id);
-                // create font element 
+                // create font element
                     let font = document.createElement("p")
                      font.style.color = "black";
                     font.appendChild(document.createTextNode(arreed[i].contant));
                     li.appendChild(font);
-                     //create del buuton 
+                     //create del buuton
                      let  dlSpanReminder = document.createElement("span");
                      dlSpanReminder.className = "del";
                      dlSpanReminder.appendChild(document.createTextNode("Delete"));
@@ -239,7 +234,7 @@ let reminder = document.querySelectorAll('.reminder')
    }
 }
 
-// filter Notes or reminder 
+// filter Notes or reminder
 filter.oninput = function pagefilter(){switch(filter.value){
     case "note" :
     reminds.style.display = "none";
